@@ -142,7 +142,7 @@ export default async function createRelease(
         body: bodyFileContent || body,
         draft,
         prerelease,
-        target_commitish: commitish || context.sha,
+        target_commitish: REPO.target_commit || commitish || context.sha,
       })
 
       release = createdRelease.data
